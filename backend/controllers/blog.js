@@ -17,6 +17,14 @@ router
     } catch (e) {
       return response.status(400).json({ error: e.message }).end();
     }
+  })
+  .get("/:blogId", async (request, response) => {
+    const blogId = request.params.blogId;
+    const blog = await Blog.findById(blogId);
+    if (blog) {
+      return response.status(200).json({ blog });
+    }
+    return response.status(404).json({error: "blog not found"})
   });
 
 module.exports = router;
