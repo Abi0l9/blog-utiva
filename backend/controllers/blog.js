@@ -42,7 +42,7 @@ router
     const blog = await Blog.findById(blogId);
     if (blog) {
       try {
-        await Blog.findByIdAndUpdate(blogId, {...update, ...extras});
+        await Blog.findByIdAndUpdate(blogId, { ...update, ...extras });
       } catch (e) {
         return response.status(400).json({ error: e.message }).end();
       }
@@ -54,6 +54,15 @@ router
         .end();
     }
 
+    return response.status(404).json({ error: "blog not found" });
+  })
+  .delete("/:blogId", async (request, response) => {
+    const blogId = request.params.blogId;
+
+    const blog = await Blog.findByIdAndDelete(blogId);
+    if (blog) {
+      return response.status(200).json({ message: "Deleted Successfully" });
+    }
     return response.status(404).json({ error: "blog not found" });
   });
 
