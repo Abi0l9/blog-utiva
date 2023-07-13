@@ -20,11 +20,41 @@ router
   })
   .get("/:blogId", async (request, response) => {
     const blogId = request.params.blogId;
+    try {
+      const blog = await Blog.findById(blogId);
+      if (blog) {
+        return response.status(200).json({ blog });
+      }
+    } catch (e) {
+      return response.status(500).json({ error: "Invalid Id" });
+    }
+
+    return response.status(404).json({ error: "blog not " });
+  })
+  .patch("/:blogId", async (request, response) => {
+    const blogId = request.params.blogId;
+    const update = request.body;
+    const extras = {
+      edited: true,
+      published: Date().toString(),
+    };
+
     const blog = await Blog.findById(blogId);
     if (blog) {
-      return response.status(200).json({ blog });
+      try {
+        await Blog.findByIdAndUpdate(blogId, {...update, ...extras});
+      } catch (e) {
+        return response.status(400).json({ error: e.message }).end();
+      }
+
+      const newUpdate = { ...blog, ...update };
+      return response
+        .status(200)
+        .json({ message: "Updated Successfully!" })
+        .end();
     }
-    return response.status(404).json({error: "blog not found"})
+
+    return response.status(404).json({ error: "blog not found" });
   });
 
 module.exports = router;

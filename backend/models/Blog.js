@@ -6,6 +6,10 @@ const BlogSchema = Schema({
     required: [true, "Title is reuired"],
   },
   description: String,
+  edited: {
+  	type: Boolean,
+  	default: false
+  },
   body: {
     type: String,
     required: [true, "Blog body is required"],
