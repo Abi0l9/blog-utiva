@@ -1,5 +1,11 @@
+import Layout from "./Layout";
+
 function App() {
-  return <div className="App">App home</div>;
+  return (
+    <div className="">
+      <Layout />
+    </div>
+  );
 }
 
 export default App;
