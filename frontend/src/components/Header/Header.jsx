@@ -12,7 +12,11 @@ const Header = () => {
       </div>
       <div className="flex flex-row flex-grow  items-center justify-between">
         <ol className="hidden md:flex flex-row flex-grow justify-around">
-          <li className="p-1 cursor-pointer">Latest</li>
+          <li className="p-1 cursor-pointer ">
+            <a href="#latest" className="active:rounded-[5px]">
+              Latest
+            </a>
+          </li>
           <li className="p-1 cursor-pointer">Hot</li>
           <li className="p-1 cursor-pointer">Most Read</li>
           <li className="border border-blue-500 py-1  px-3 cursor-pointer rounded-[8px] active:bg-blue-500 active:text-white  hover:bg-blue-300 hover:text-white">
