@@ -1,28 +1,25 @@
 import React from "react";
 
-const BlogCard = ({ children }) => {
+const BlogCard = ({ image, title, date, category, author }) => {
   return (
-    <div>
-      <div className="w-full flex flex-row md:flex-col md:w-1/5 mb-3 md:mb-5 rounded-[5px]">
-        <div className="h-[200px] w-2/4 md:w-full">
-          {children[0]}
-          {/* <img
-            src={`${children[0]}`}
-            alt="card"
-            className="h-[100%] object-cover rounded-[5px] w-full"
-          /> */}
+    <div className="w-full flex flex-row md:flex-col md:w-[22%] mb-3 md:mb-5 rounded-[5px]">
+      <div className="h-[200px] w-2/4 md:w-full">
+        <img
+          src={`${image}`}
+          alt="card"
+          className="h-[100%] object-cover rounded-[5px] w-full"
+        />
+      </div>
+      <div className="w-2/4 md:w-full md:h-[170px] md:flex md:flex-col md:justify-between pl-2 md:pl-0 md:py-2">
+        <div className="md:h-[120px]">
+          <p className="text-3xl md:text-xl flex-grow">{title}</p>
         </div>
-        <div className="w-2/4 md:w-full pl-2 md:pl-0 md:py-2">
-          {children[1]}
-          {/* <p className="text-3xl md:text-xl">{children[1]}</p> */}
+        <div className="md:h-[50px]">
+          <p className="font-semibold text-gray-800 my-3">{author}</p>
           <div className="flex flex-row">
-            {[children[2]]}
-            {/* <p className="text-xs my-3 text-gray-700 mr-6">{[children[2]]}</p> */}
-            {/* <p className="text-xs my-3 text-gray-700">{children[3]}</p> */}
-            {children[3]}
+            <p className="text-xs my-3 text-gray-700 mr-6">{date}</p>
+            <p className="text-xs my-3 text-gray-700">{category}</p>
           </div>
-          {/* <p className="font-semibold text-gray-800">{children[4]}</p> */}
-          {children[4]}
         </div>
       </div>
     </div>
