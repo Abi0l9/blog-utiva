@@ -6,8 +6,8 @@ import BlogCardWrapper from "../BlogCardWrapper";
 
 const Latest = () => {
   return (
-    <div className="p-3 my-10 mt-5 md:px-8 lg:px-10" id="latest">
-      <p className="text-xl mb-5">Latest Posts</p>
+    <div className="p-3 my-10 mt-5 md:px-8 lg:px-10 min-h-[80%]" id="latest">
+      <p className="text-2xl mb-5">Latest Posts</p>
       <BlogCardWrapper>
         <BlogCard
           image={CardImg}

@@ -24,11 +24,11 @@ const Hero = () => {
             recusandae beatae repudiandae, ullam ab pariatur! Sapiente, expedita
             dicta. Officia, sequi sapiente?
           </p>
-          <div className="flex flex-row items-center">
+          <p className="font-semibold">Author Name</p>
+          <div className="flex flex-row items-center my-4">
             <p className="my-2 mr-10 text-sm text-gray-400">Date</p>
             <p className="text-sm text-gray-400">Category</p>
           </div>
-          <p className="font-semibold">Author Name</p>
         </div>
       </div>
     </div>

@@ -11,19 +11,19 @@ const Header = () => {
         </p>
       </div>
       <div className="flex flex-row flex-grow  items-center justify-between">
-        <ol className="hidden md:flex flex-row flex-grow justify-around">
+        <ol className="hidden md:flex md:flex-row md:flex-grow md:justify-between lg:justify-around">
           <li className="p-1 cursor-pointer ">
             <a href="#latest" className="active:rounded-[5px]">
               Latest
             </a>
           </li>
-          <li className="p-1 cursor-pointer">Hot</li>
+          <li className="p-1 cursor-pointer">Trending</li>
           <li className="p-1 cursor-pointer">Most Read</li>
           <li className="border border-blue-500 py-1  px-3 cursor-pointer rounded-[8px] active:bg-blue-500 active:text-white  hover:bg-blue-300 hover:text-white">
             Publish
           </li>
         </ol>
-        <div className="hidden md:block ml-[60px] text-right">
+        <div className="hidden md:block ml-[30px] text-right">
           <button className="p-[4px] px-3 bg-blue-500 text-white rounded-[8px] font-bold active:bg-blue-900">
             subscribe
           </button>
