@@ -1,7 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import linkedin from "@iconify/icons-logos/linkedin-icon";
-import facebook from "@iconify/icons-logos/facebook";
 import twitter from "@iconify/icons-logos/twitter";
 import github from "@iconify/icons-logos/github-icon";
 
@@ -14,10 +13,16 @@ const Footer = () => {
           Find Me
         </p>
         <div className="flex flex-row w-1/4 justify-between mx-auto items-center">
-          <Icon icon={github} style={{ color: "white" }} width={24} />
-          <Icon icon={linkedin} color="white" width={24} />
-          <Icon icon={facebook} width={24} />
-          <Icon icon={twitter} width={24} />
+          <a href="https://github.com/Abi0l9">
+            <Icon icon={github} style={{ color: "white" }} width={24} />
+          </a>
+          <a href="https://www.linkedin.com/in/monsur-oyedeji">
+            <Icon icon={linkedin} color="white" width={24} />
+          </a>
+
+          <a href="https://twitter.com/oyewaleM">
+            <Icon icon={twitter} width={24} />
+          </a>
         </div>
       </div>
       <div className="mb-5 text-center mt-10">
