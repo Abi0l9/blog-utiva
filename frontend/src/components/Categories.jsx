@@ -7,11 +7,13 @@ const Categories = (props) => {
       <p className="text-2xl mb-5  text-red-500 border-b-4 border-blue-900 w-[120px]">
         Categories
       </p>
-      <div className="flex flex-row space-x-3 w-full">
+      <div className="flex flex-row flex-wrap justify-start items-start w-full">
         <Category color={"blue"}>Sport </Category>
         <Category color={"blue"}>Fashion </Category>
         <Category color={"blue"}>Technology </Category>
         <Category color={"blue"}>Design </Category>
+        <Category color={"blue"}>Food </Category>
+        <Category color={"blue"}>Food </Category>
         <Category color={"blue"}>Food </Category>
       </div>
     </div>

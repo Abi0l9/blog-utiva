@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header/Header";
 import Main from "./components/Main";
 import Categories from "./components/Categories";
+import Subscribe from "./components/Subscribe";
 
 const Layout = () => {
   return (
@@ -9,6 +10,7 @@ const Layout = () => {
       <Header />
       <Main />
       <Categories />
+      <Subscribe />
     </div>
   );
 };
