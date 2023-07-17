@@ -5,7 +5,7 @@ import Img from "../../../assets/img/test2.jpg";
 const Hot = () => {
   return (
     <div className="p-3 md:px-8 lg:px-10 min-h-[80%]" id="hot">
-      <p className="text-2xl mb-5">Hot</p>
+      <p className="text-2xl mb-5  text-blue-500">Hot</p>
       <TrendCard
         Img={Img}
         title="Hottest News in town is here in a new dimension"
