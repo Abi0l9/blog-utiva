@@ -3,6 +3,7 @@ import Hero from "./Hero";
 import Latest from "./Latest";
 import Trending from "./Trending";
 import Hot from "./Hot";
+import Related from "../Related";
 
 const Main = () => {
   return (
@@ -11,6 +12,7 @@ const Main = () => {
       <Latest />
       <Trending />
       <Hot />
+      <Related />
     </div>
   );
 };
