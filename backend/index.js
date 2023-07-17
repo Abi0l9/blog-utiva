@@ -8,7 +8,7 @@ app.use(express.json());
 require("./db");
 
 app.get("", (request, response) => response.send("Welcome home"));
-app.use("/api/blogs", BlogRouter)
+app.use("/api/blogs", BlogRouter);
 
 const PORT = 8000;
 app.listen(PORT, () => {
