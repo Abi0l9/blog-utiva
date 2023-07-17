@@ -33,7 +33,9 @@ const Header = () => {
         </ol>
         <div className="hidden md:block ml-[30px] text-right">
           <button className="p-[4px] px-3 bg-blue-500 text-white rounded-[8px] font-bold active:bg-blue-900">
-            subscribe
+            <a href="#subscribe" className="active:rounded-[5px]">
+              subscribe
+            </a>
           </button>
         </div>
         <div className="md:hidden float-right cursor-pointer ">

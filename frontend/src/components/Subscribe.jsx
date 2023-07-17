@@ -3,7 +3,7 @@ import React from "react";
 const Subscribe = () => {
   return (
     <div
-      className="p-3 md:px-8 lg:px-10 min-h-[80%] rounded-[8px] shadow my-5 bg-blue-700 py-4 text-center w-10/12 mx-auto md:w-3/4  md:mx-auto"
+      className="p-3 md:px-8 lg:px-10 min-h-[80%]  rounded-[8px] shadow my-5 bg-blue-700 py-4 text-center w-10/12 mx-auto md:w-3/4  md:mx-auto"
       id="subscribe"
     >
       {/* <p className="text-2xl mb-5  text-blue-500">Subscribe</p> */}
@@ -25,6 +25,7 @@ const Subscribe = () => {
           <input
             type="email"
             id="subscribe"
+            placeholder="james@yahoo.com"
             className="border-gray-100 w-full py-2 text-center font-bold mt-2 rounded-[5px] focus:border-blue-900"
           />
         </div>

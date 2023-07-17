@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Abi0l9/blog-utiva/issues"
   },
-  "homepage": "https://github.com/Abi0l9/blog-utiva#readme"
+  "homepage": "https://github.com/Abi0l9/blog-utiva#readme",
+  "dependencies": {
+    "@iconify/icons-logos": "^1.2.33"
+  }
 }

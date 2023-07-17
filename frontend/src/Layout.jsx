@@ -3,6 +3,7 @@ import Header from "./components/Header/Header";
 import Main from "./components/Main";
 import Categories from "./components/Categories";
 import Subscribe from "./components/Subscribe";
+import Footer from "./components/Footer";
 
 const Layout = () => {
   return (
@@ -11,6 +12,7 @@ const Layout = () => {
       <Main />
       <Categories />
       <Subscribe />
+      <Footer />
     </div>
   );
 };
