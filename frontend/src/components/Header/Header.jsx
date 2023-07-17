@@ -17,8 +17,16 @@ const Header = () => {
               Latest
             </a>
           </li>
-          <li className="p-1 cursor-pointer">Trending</li>
-          <li className="p-1 cursor-pointer">Most Read</li>
+          <li className="p-1 cursor-pointer">
+            <a href="#trending" className="active:rounded-[5px]">
+              Trending
+            </a>
+          </li>
+          <li className="p-1 cursor-pointer">
+            <a href="#hot" className="active:rounded-[5px]">
+              Hot
+            </a>
+          </li>
           <li className="border border-blue-500 py-1  px-3 cursor-pointer rounded-[8px] active:bg-blue-500 active:text-white  hover:bg-blue-300 hover:text-white">
             Publish
           </li>
