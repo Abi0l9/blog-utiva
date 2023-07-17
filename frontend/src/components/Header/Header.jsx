@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "@iconify/react";
+import { Link } from "react-router-dom";
 import menu from "@iconify/icons-material-symbols/menu";
 
 const Header = () => {
@@ -7,7 +8,7 @@ const Header = () => {
     <div className="flex flex-row mb-6 p-3 md:px-8 lg:px-10 items-center shadow-md w-full">
       <div className=" w-full md:w-2/5 lg:2/4">
         <p className="font-bold text-blue-500 text-[2rem] cursor-pointer">
-          Al-Khalifah
+          <Link to="/">Al-Khalifah</Link>
         </p>
       </div>
       <div className="flex flex-row flex-grow  items-center justify-between">
@@ -28,7 +29,7 @@ const Header = () => {
             </a>
           </li>
           <li className="border border-blue-500 py-1  px-3 cursor-pointer rounded-[8px] active:bg-blue-500 active:text-white  hover:bg-blue-300 hover:text-white">
-            Publish
+            <Link to="/publish">Publish</Link>
           </li>
         </ol>
         <div className="hidden md:block ml-[30px] text-right">
