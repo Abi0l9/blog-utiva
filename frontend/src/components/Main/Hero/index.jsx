@@ -1,6 +1,6 @@
-import HeroIMG from "../../../assets/img/test4.jpg";
+import Category from "../../Category";
 
-const Hero = () => {
+const Hero = ({ topBlog }) => {
   return (
     <div className="flex flex-col p-3 md:px-8 lg:px-10 md:flex-row md:items-center w-full">
       <div className="relative -z-10 w-full mb-4 md:mr-5 h-[300px] md:w-7/12 md:h-[400px] bg-gray-300 rounded-[15px]">
@@ -8,26 +8,30 @@ const Hero = () => {
           New
         </div>
         <img
-          src={`${HeroIMG}`}
+          src={`${topBlog?.featuredImg}`}
           alt="hero"
           className="object-cover h-[100%] w-full rounded-[15px] "
         />
       </div>
       <div className="text-left flex flex-col  pb-5 md:justify-start md:w-5/12 md:h-[400px]">
-        <p className="text-2xl font-medium ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit
-        </p>
+        <p className="text-2xl font-medium ">{topBlog?.title}</p>
         <div className="">
-          <p className="my-5">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor ea
-            eum commodi, perferendis qui assumenda laborum sint cupiditate
-            recusandae beatae repudiandae, ullam ab pariatur! Sapiente, expedita
-            dicta. Officia, sequi sapiente?
+          <p className="my-5">{topBlog?.description}</p>
+          <p className="font-semibold">
+            {topBlog?.author}{" "}
+            <span className="text-gray-500">
+              {topBlog?.edited && "- Edited"}
+            </span>
           </p>
-          <p className="font-semibold">Author Name</p>
           <div className="flex flex-row items-center my-4">
-            <p className="my-2 mr-10 text-sm text-gray-400">Date</p>
-            <p className="text-sm text-gray-400">Category</p>
+            <p className="my-2 mr-10 text-sm text-gray-400">
+              {topBlog?.published}
+            </p>
+          </div>
+          <div className="text-sm text-gray-400 flex flex-row">
+            {topBlog?.tags.map((tag) => (
+              <Category color="blue">{tag}</Category>
+            ))}
           </div>
         </div>
       </div>
