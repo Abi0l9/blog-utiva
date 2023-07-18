@@ -3,7 +3,6 @@ import Hero from "./Hero";
 import Latest from "./Latest";
 import Trending from "./Trending";
 import Hot from "./Hot";
-import Related from "../Related";
 
 import BlogServices from "../../services/blog";
 
@@ -25,10 +24,9 @@ const Main = () => {
   return (
     <div>
       <Hero topBlog={topBlog} />
-      <Latest />
-      <Trending />
-      <Hot />
-      <Related />
+      <Latest blogs={blogs} />
+      <Trending blogs={blogs} />
+      <Hot blogs={blogs} />
     </div>
   );
 };
