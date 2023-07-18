@@ -1,13 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Main from "./components/Main";
-import Publish from "./components/Publish";
-import AllBlogs from "./components/Blog/AllBlogs";
-import Selected from "./components/Blog/Selected";
-import Categories from "./components/Categories";
-import Subscribe from "./components/Subscribe";
-import Footer from "./components/Footer";
+import Header from "./Header/Header";
+import Main from "./Main";
+import Publish from "./Publish";
+import AllBlogs from "./Blog/AllBlogs";
+import Selected from "./Blog/Selected";
+import Categories from "./Categories";
+import Subscribe from "./Subscribe";
+import Footer from "./Footer";
 
 const Layout = () => {
   return (
