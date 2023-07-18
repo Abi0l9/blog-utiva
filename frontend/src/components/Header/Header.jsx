@@ -35,7 +35,7 @@ const MenuItems = ({ styles, handleClick }) => {
         </li>
         <li onClick={handleClick} className="p-1 cursor-pointer ">
           <a
-            href="/"
+            href="/blogs"
             className="active:rounded-[5px] hover:border-b-2 border-blue-500"
           >
             All Blog Posts
