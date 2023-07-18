@@ -11,7 +11,7 @@ const MenuItems = ({ styles, handleClick }) => {
       <ol className="flex flex-col items-center">
         <li onClick={handleClick} className="p-1 cursor-pointer ">
           <a
-            href="#latest"
+            href="/home#latest"
             className="active:rounded-[5px] hover:border-b-2 border-blue-500"
           >
             Latest
@@ -19,7 +19,7 @@ const MenuItems = ({ styles, handleClick }) => {
         </li>
         <li onClick={handleClick} className="p-1 cursor-pointer">
           <a
-            href="#trending"
+            href="/home#trending"
             className="active:rounded-[5px] hover:border-b-2 border-blue-500"
           >
             Trending
@@ -27,7 +27,7 @@ const MenuItems = ({ styles, handleClick }) => {
         </li>
         <li onClick={handleClick} className="p-1 cursor-pointer">
           <a
-            href="#hot"
+            href="/home#hot"
             className="active:rounded-[5px] hover:border-b-2 border-blue-500"
           >
             Hot
@@ -52,7 +52,7 @@ const MenuItems = ({ styles, handleClick }) => {
         <div className="flex flex-col md:flex-row items-center my-3">
           <label
             htmlFor="subscribe"
-            className="block font-semibold md:mr-2 text-blue-800 mt-[100px]"
+            className="block font-semibold md:mr-2 text-blue-800 mt-[50px]"
           >
             Email
           </label>
@@ -92,17 +92,17 @@ const Header = () => {
       <div className="z-10 flex flex-row flex-grow  items-center justify-between">
         <ol className="hidden md:flex md:flex-row md:flex-grow md:justify-between lg:justify-around">
           <li className="p-1 cursor-pointer ">
-            <a href="#latest" className="active:rounded-[5px]">
+            <a href="/home#latest" className="active:rounded-[5px]">
               Latest
             </a>
           </li>
           <li className="p-1 cursor-pointer">
-            <a href="#trending" className="active:rounded-[5px]">
+            <a href="/home#trending" className="active:rounded-[5px]">
               Trending
             </a>
           </li>
           <li className="p-1 cursor-pointer">
-            <a href="#hot" className="active:rounded-[5px]">
+            <a href="/home#hot" className="active:rounded-[5px]">
               Hot
             </a>
           </li>
@@ -112,7 +112,7 @@ const Header = () => {
         </ol>
         <div className="hidden md:block ml-[30px] text-right">
           <button className="p-[4px] px-3 bg-blue-500 text-white rounded-[8px] font-bold active:bg-blue-900">
-            <a href="#subscribe" className="active:rounded-[5px]">
+            <a href="/home#subscribe" className="active:rounded-[5px]">
               subscribe
             </a>
           </button>
@@ -127,7 +127,10 @@ const Header = () => {
         </div>
       </div>
       {menuOpen && (
-        <aside className="absolute top-0 pt-[30px] min-h-[2000px] w-3/4 opacity-90 flex flex-col items-center right-0 bg-white text-black">
+        <aside
+          onClick={handleMenuClick}
+          className="absolute top-0 pt-[30px] min-h-[2000px] w-full opacity-90 flex flex-col items-center right-0 bg-white text-black"
+        >
           <MenuItems styles="col" handleClick={handleMenuClick} />
         </aside>
       )}

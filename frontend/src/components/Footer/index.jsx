@@ -12,7 +12,7 @@ export const Links = ({ length }) => {
           Find Me
         </p>
         <div
-          className={`flex flex-row w-${length}/4 justify-between mx-auto items-center`}
+          className={`flex flex-row w-${length}/4 md:w-1/4 justify-between mx-auto items-center`}
         >
           <a href="https://github.com/Abi0l9">
             <Icon icon={github} style={{ color: "white" }} width={24} />
@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <div className=" p-3 md:px-8 lg:px-10  mt-screen min-h-[100px]">
       <div className="h-[1px] bg-gray-800 w-full my-4"></div>
-      <Links length={1} />
+      <Links length={2} />
       <div className="mb-5 text-center mt-10">
         <p className="text-2xl text-gray-500">Al-Khalifah</p>
         <p className="text-gray-500">Copyright c 2023</p>
