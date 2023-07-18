@@ -25,6 +25,7 @@ const Subscribe = () => {
           <input
             type="email"
             id="subscribe"
+            name="subscribe"
             placeholder="james@yahoo.com"
             className="border-gray-100 w-full py-2 text-center font-bold mt-2 rounded-[5px] focus:border-blue-900"
           />
