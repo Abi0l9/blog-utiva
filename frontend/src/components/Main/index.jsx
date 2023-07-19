@@ -17,10 +17,6 @@ const Main = () => {
 
     //eslint-disable-next-line
   }, []);
-
-  useEffect(() => {
-    console.log(blogs);
-  }, [blogs]);
   return (
     <div>
       <Hero topBlog={topBlog} />

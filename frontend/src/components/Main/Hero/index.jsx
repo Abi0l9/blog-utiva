@@ -1,3 +1,4 @@
+import { handleTime } from "../../../utils";
 import Category from "../../Category";
 
 const Hero = ({ topBlog }) => {
@@ -25,12 +26,14 @@ const Hero = ({ topBlog }) => {
           </p>
           <div className="flex flex-row items-center my-4">
             <p className="my-2 mr-10 text-sm text-gray-400">
-              {topBlog?.published}
+              {handleTime(topBlog?.published)}
             </p>
           </div>
           <div className="text-sm text-gray-400 flex flex-row">
             {topBlog?.tags.map((tag) => (
-              <Category color="blue">{tag}</Category>
+              <Category key={tag} color="blue">
+                {tag}
+              </Category>
             ))}
           </div>
         </div>

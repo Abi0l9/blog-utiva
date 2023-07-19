@@ -20,7 +20,9 @@ const BlogCard = ({ image, title, date, category, author }) => {
           </p>
           <div className="flex flex-row items-center">
             <div className="text-xs my-3 text-gray-700 mr-6">{date}</div>
-            <div className="text-xs my-3 text-gray-700">{category}</div>
+          </div>
+          <div className="text-xs my-3 text-gray-700 flex flex-row">
+            {category}
           </div>
         </div>
       </div>
