@@ -1,18 +1,31 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import backupIcon from "@iconify/icons-material-symbols/backup";
 import back from "@iconify/icons-material-symbols/arrow-back-ios-new";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import BlogServices from "../../services/blog";
 
 const Publish = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("");
   const [tags, setTags] = useState("");
   const [featuredImg, setFeaturedImg] = useState("");
+  const [btn, setBtn] = useState("Publish");
+
+  useEffect(() => {
+    if (location.state) {
+      setBtn("Finish Editing");
+      setTitle(location.state.title);
+      setBody(location.state.body);
+      setAuthor(location.state.author);
+      setTags(location.state.tags);
+      setFeaturedImg(location.state.featuredImg);
+    }
+  }, [location.state]);
 
   const handleChange = (e, fn) => {
     const value = e.target.value;
@@ -142,7 +155,7 @@ const Publish = () => {
             />
           </div>
           <div className="w-3/4 md:w-2/4 border-[2px] border-blue-800 rounded-[5px] my-4 mx-auto text-center active:bg-blue-800 active:text-white">
-            <button className="text-base py-1 px-4">Publish</button>
+            <button className="text-base py-1 px-4">{btn}</button>
           </div>
         </div>
       </form>

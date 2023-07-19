@@ -17,7 +17,11 @@ const Latest = ({ blogs }) => {
             key={blog?._id}
             image={blog?.featuredImg}
             title={
-              <Link to="/blogs/article" className="text-blue-500" state={blog}>
+              <Link
+                to={`/blogs/${blog?.title}`}
+                className="text-blue-500"
+                state={blog}
+              >
                 {blog?.title}
               </Link>
             }

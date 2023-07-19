@@ -16,13 +16,13 @@ const addBlog = async (blog) => {
   return request.data;
 };
 
-const editBlog = async (blog) => {
-  const request = await axios.patch(`${baseUrl}${blog._id}`);
+const editBlog = async (blogId) => {
+  const request = await axios.patch(`${baseUrl}${blogId}`);
   return request.data;
 };
 
-const deleteBlog = async (blog) => {
-  const request = await axios.delete(`${baseUrl}${blog._id}`);
+const deleteBlog = async (blogId) => {
+  const request = await axios.delete(`${baseUrl}${blogId}`);
   return request.data;
 };
 

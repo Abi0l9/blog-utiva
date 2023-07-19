@@ -7,7 +7,7 @@ import { Links } from "../Footer";
 
 const MenuItems = ({ styles, handleClick }) => {
   return (
-    <div className={`z-10 flex flex-${styles}  justify-between`}>
+    <div className={`z-40 flex flex-${styles}  justify-between`}>
       <ol className="flex flex-col items-center">
         <li onClick={handleClick} className="p-1 cursor-pointer ">
           <a

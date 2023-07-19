@@ -17,7 +17,7 @@ const Hero = ({ topBlog }) => {
       </div>
       <div className="text-left flex flex-col  pb-5 md:justify-start md:w-5/12 md:h-[400px]">
         <p className="text-2xl font-medium text-blue-500 active:text-blue-800 hover:underline">
-          <Link to="/blogs/article" state={topBlog}>
+          <Link to={`blogs/${topBlog?.title}`} state={topBlog}>
             {topBlog?.title}
           </Link>
         </p>

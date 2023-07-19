@@ -11,7 +11,7 @@ const TrendCard = ({ Img, title, author, date, category }) => {
         />
       </div>
       <div className="w-full md:h-[170px] md:flex md:flex-col md:justify-between mb-10">
-        <div className="md:h-[120px]">
+        <div className="md:h-[120px] mt-3">
           <p className="text-2xl md:text-3xl flex-grow">{title}</p>
         </div>
         <div className="">

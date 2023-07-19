@@ -19,6 +19,7 @@ const Layout = () => {
         <Route element={<Publish />} path="/publish" />
         <Route element={<AllBlogs />} path="/blogs" />
         <Route element={<Selected />} path="/blogs/:article" />
+        <Route element={<Publish />} path="/blogs/:id/edit" />
       </Routes>
       <Categories />
       <Subscribe />
