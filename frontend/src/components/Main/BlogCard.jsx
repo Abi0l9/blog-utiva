@@ -3,7 +3,7 @@ import React from "react";
 const BlogCard = ({ image, title, date, category, author }) => {
   return (
     <div className="w-full flex flex-row md:flex-col md:w-[22%] mb-3 md:mb-5 rounded-[5px]">
-      <div className="h-[200px] w-2/4 md:w-full">
+      <div className="h-[200px] w-2/4 md:w-full bg-gray-200 rounded-[10px]">
         <img
           src={`${image}`}
           alt="card"

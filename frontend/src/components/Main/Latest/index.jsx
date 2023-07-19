@@ -5,7 +5,7 @@ import { handleTime } from "../../../utils";
 import Category from "../../Category";
 
 const Latest = ({ blogs }) => {
-  const topEight = blogs?.slice(-8);
+  const topEight = blogs?.slice(0, 8);
 
   return (
     <div className="p-3 my-10 mt-5 md:px-8 lg:px-10 min-h-[80%]" id="latest">
@@ -14,10 +14,10 @@ const Latest = ({ blogs }) => {
         {topEight?.map((blog) => (
           <BlogCard
             key={blog?._id}
-            image={blog.featuredImg}
+            image={blog?.featuredImg}
             title={blog?.title}
             date={handleTime(blog?.published)}
-            category={blog?.tags.map((tag) => (
+            category={blog?.tags?.map((tag) => (
               <Category key={tag} color="blue">
                 {tag}
               </Category>
