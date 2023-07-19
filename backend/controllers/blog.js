@@ -9,7 +9,8 @@ router
   .post("", async (request, response) => {
     const body = request.body;
     const published = Date().toString();
-    const newBlog = new Blog({ ...body, published });
+    const tags = body.tags.split(",");
+    const newBlog = new Blog({ ...body, published, tags });
 
     try {
       const savedBlog = await newBlog.save();

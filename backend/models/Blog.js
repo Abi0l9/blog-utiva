@@ -6,15 +6,20 @@ const BlogSchema = Schema({
     required: [true, "Title is reuired"],
   },
   description: String,
+  feauturedImg: {
+    type: String,
+    default: null,
+  },
   edited: {
-  	type: Boolean,
-  	default: false
+    type: Boolean,
+    default: false,
   },
   body: {
     type: String,
     required: [true, "Blog body is required"],
   },
   published: String,
+  tags: [String],
   author: {
     type: String,
     default: "Anonymous",
