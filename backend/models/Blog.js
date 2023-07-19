@@ -6,7 +6,7 @@ const BlogSchema = Schema({
     required: [true, "Title is reuired"],
   },
   description: String,
-  feauturedImg: {
+  featuredImg: {
     type: String,
     default: null,
   },

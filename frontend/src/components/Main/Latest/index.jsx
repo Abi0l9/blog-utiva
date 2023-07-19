@@ -3,9 +3,10 @@ import BlogCard from "../BlogCard";
 import BlogCardWrapper from "../BlogCardWrapper";
 import { handleTime } from "../../../utils";
 import Category from "../../Category";
+import { Link } from "react-router-dom";
 
 const Latest = ({ blogs }) => {
-  const topEight = blogs?.slice(0, 8);
+  const topEight = blogs?.slice(0, 9);
 
   return (
     <div className="p-3 my-10 mt-5 md:px-8 lg:px-10 min-h-[80%]" id="latest">
@@ -15,7 +16,11 @@ const Latest = ({ blogs }) => {
           <BlogCard
             key={blog?._id}
             image={blog?.featuredImg}
-            title={blog?.title}
+            title={
+              <Link to="/blogs/article" className="text-blue-500" state={blog}>
+                {blog?.title}
+              </Link>
+            }
             date={handleTime(blog?.published)}
             category={blog?.tags?.map((tag) => (
               <Category key={tag} color="blue">

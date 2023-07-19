@@ -18,9 +18,11 @@ const TrendCard = ({ Img, title, author, date, category }) => {
           <p className="text-base md:font-semibold text-gray-800 my-3">
             {author}
           </p>
-          <div className="flex flex-row">
+          <div className="flex flex- items-center">
             <p className="text-xs my-3 text-gray-700 mr-6">{date}</p>
-            <p className="text-xs my-3 text-gray-700">{category}</p>
+            <div className="text-xs my-3 text-gray-700 flex flex-row">
+              {category}
+            </div>
           </div>
         </div>
       </div>

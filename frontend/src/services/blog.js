@@ -6,8 +6,8 @@ const getBlogs = async () => {
   return request.data;
 };
 
-const getABlog = async (blog) => {
-  const request = await axios.get(`${baseUrl}${blog.id}`);
+const getABlog = async (blogId) => {
+  const request = await axios.get(`${baseUrl}${blogId}`);
   return request.data;
 };
 
@@ -17,12 +17,12 @@ const addBlog = async (blog) => {
 };
 
 const editBlog = async (blog) => {
-  const request = await axios.patch(`${baseUrl}${blog.id}`);
+  const request = await axios.patch(`${baseUrl}${blog._id}`);
   return request.data;
 };
 
 const deleteBlog = async (blog) => {
-  const request = await axios.delete(`${baseUrl}${blog.id}`);
+  const request = await axios.delete(`${baseUrl}${blog._id}`);
   return request.data;
 };
 
