@@ -36,7 +36,11 @@ router
   .patch("/:blogId", async (request, response) => {
     const blogId = request.params.blogId;
     const update = request.body;
+    const tags = update.tags.includes(",")
+      ? update.tags.split(",")?.map((tag) => tag.toLowerCase())
+      : update.tags;
     const extras = {
+      tags,
       edited: true,
       published: Date().toString(),
     };
@@ -60,12 +64,14 @@ router
   })
   .delete("/:blogId", async (request, response) => {
     const blogId = request.params.blogId;
-
-    const blog = await Blog.findByIdAndDelete(blogId);
-    if (blog) {
+    try {
+      await Blog.findByIdAndDelete(blogId);
       return response.status(200).json({ message: "Deleted Successfully" });
+    } catch (e) {
+      console.log(e.message);
     }
-    return response.status(404).json({ error: "blog not found" });
+
+    // else return response.status(404).json({ error: "blog not found" });
   });
 
 module.exports = router;

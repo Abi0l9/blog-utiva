@@ -16,8 +16,8 @@ const addBlog = async (blog) => {
   return request.data;
 };
 
-const editBlog = async (blogId) => {
-  const request = await axios.patch(`${baseUrl}${blogId}`);
+const editBlog = async (blogId, blog) => {
+  const request = await axios.patch(`${baseUrl}${blogId}`, blog);
   return request.data;
 };
 

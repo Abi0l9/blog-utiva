@@ -2,12 +2,18 @@ import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
 import backupIcon from "@iconify/icons-material-symbols/backup";
 import back from "@iconify/icons-material-symbols/arrow-back-ios-new";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import BlogServices from "../../services/blog";
 
 const Publish = () => {
   const navigate = useNavigate();
   const location = useLocation();
+
+  const [id, setId] = useState("");
+
+  const goBack = () => {
+    window.history.back();
+  };
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
@@ -19,6 +25,7 @@ const Publish = () => {
   useEffect(() => {
     if (location.state) {
       setBtn("Finish Editing");
+      setId(location.state?._id);
       setTitle(location.state.title);
       setBody(location.state.body);
       setAuthor(location.state.author);
@@ -49,7 +56,11 @@ const Publish = () => {
     e.preventDefault();
     const data = { title, body, author, tags, featuredImg };
     try {
-      await BlogServices.addBlog(data);
+      if (id) {
+        await BlogServices.editBlog(id, data);
+      } else {
+        await BlogServices.addBlog(data);
+      }
 
       navigate("/");
     } catch (e) {
@@ -60,10 +71,10 @@ const Publish = () => {
   return (
     <div className="p-3  md:px-8 min-h-screen lg:px-10">
       <div className="flex flex-row items-center mb-5 w-full cursor-pointer">
-        <Link to="/" className="w-1/3 flex flex-row items-center">
-          <Icon icon={back} width={18} className="text-blue-900" />
-          <p className="text-blue-900 font-bold">Back</p>
-        </Link>
+        <div onClick={goBack} className="flex flex-row items-center w-1/3">
+          <Icon icon={back} width={18} className="text-blue-700" />
+          <p className="text-blue-700 font-bold">Back</p>
+        </div>
         <div className="text-xl text-blue-500">New Blog Post</div>
       </div>
       <form action="" onSubmit={handleSubmit}>
