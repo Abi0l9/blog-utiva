@@ -13,7 +13,7 @@ app.get("", (request, response) => response.send("Welcome home"));
 app.use("/api/blogs", BlogRouter);
 app.use("/api/emails", EmailRouter);
 
-const PORT = 8000;
+const PORT = 7129;
 app.listen(PORT, () => {
   console.log(`App running on port: ${PORT}`);
 });
