@@ -1,2 +1,2 @@
-export const baseUrl = "http://localhost:8000/api/blogs/";
-export const emailUrl = "http://localhost:8000/api/emails/";
+export const baseUrl = "http://localhost:7129/api/blogs/";
+export const emailUrl = "http://localhost:7129/api/emails/";
