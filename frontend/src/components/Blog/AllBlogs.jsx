@@ -3,7 +3,7 @@ import BlogCard from "../Main/BlogCard";
 import Img from "../../assets/img/test1.jpg";
 import Category from "../Category";
 
-const AllBlogs = () => {
+const AllBlogs = ({ blogs }) => {
   return (
     <div className="p-3 mb-12 md:px-8 min-h-[600px] lg:px-10">
       <p className="text-3xl text-center text-blue-800 font-semibold mb-5">

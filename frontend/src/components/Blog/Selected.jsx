@@ -25,7 +25,12 @@ const Selected = () => {
   };
 
   useEffect(() => {
-    BlogServices.getABlog(id).then((data) => setBlog(data.blog));
+    BlogServices.getBlogs()
+      .then((data) => {
+        const blog = data.blogs.find((b) => b._id === id);
+        setBlog(blog);
+      })
+      .catch((e) => console.log(e.message));
   });
   return (
     <div className="p-3  md:px-8 min-h-[600px] lg:px-10">

@@ -3,7 +3,7 @@ const { Schema, model } = require("mongoose");
 const BlogSchema = Schema({
   title: {
     type: String,
-    required: [true, "Title is reuired"],
+    required: [true, "Title is required"],
   },
   description: String,
   featuredImg: {
