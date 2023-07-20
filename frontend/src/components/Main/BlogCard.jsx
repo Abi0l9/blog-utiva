@@ -11,21 +11,19 @@ const BlogCard = ({ image, title, date, category, author }) => {
         />
       </div>
       <div className="w-2/4 md:w-full md:h-[170px] md:flex md:flex-col md:justify-between pl-2 md:pl-0 md:py-2">
-        <div className="md:h-[100px]">
-          <p className="text-xl flex-grow">{title}</p>
+        <div className=" md:h-[100px]">
+          <p className="font-semibold">{title}</p>
         </div>
-        <div className="md:h-[30px]">
-          <p className="text-base md:font-semibold text-gray-800 my-3">
+        <div className="md:h-[20px]">
+          <p className="text-base md:font-semibold text-gray-800 my-1">
             {author}
           </p>
         </div>
-        <div className="md:h-[20px]">
+        <div className="md:h-[10px]">
           <div className="flex flex-row items-center">
             <div className="text-xs my-3 text-gray-700 mr-6">{date}</div>
           </div>
-          <div className="text-xs my-3 text-gray-700 flex flex-row">
-            {category}
-          </div>
+          <div className="text-xs text-gray-700 flex flex-row">{category}</div>
         </div>
       </div>
     </div>
