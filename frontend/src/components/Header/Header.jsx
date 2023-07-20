@@ -127,10 +127,7 @@ const Header = () => {
         </div>
       </div>
       {menuOpen && (
-        <aside
-          onClick={handleMenuClick}
-          className="absolute top-0 pt-[30px] min-h-[2000px] w-full opacity-90 flex flex-col items-center right-0 bg-white text-black"
-        >
+        <aside className="absolute top-0 pt-[30px] min-h-[2000px] w-full opacity-90 flex flex-col items-center right-0 bg-white text-black">
           <MenuItems styles="col" handleClick={handleMenuClick} />
         </aside>
       )}
