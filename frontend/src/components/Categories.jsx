@@ -10,9 +10,9 @@ const Categories = () => {
     BlogServices.getBlogs()
       .then((data) => setBlogs(data.blogs.reverse()))
       .catch((e) => console.log(e.message));
-
     //eslint-disable-next-line
-  }, []);
+  }, [blogs]);
+
   return (
     <div className="p-3 md:px-8 mb-12 lg:px-10 min-h-[80%]">
       <p className="text-2xl mb-5  text-red-500 border-b-4 border-blue-900 w-[120px]">

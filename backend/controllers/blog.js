@@ -9,7 +9,7 @@ router
   .post("", async (request, response) => {
     const body = request.body;
     const published = Date().toString();
-    const tags = body.tags.split(",")?.map((tag) => tag.toLowerCase());
+    const tags = body.tags.split(",")?.map((tag) => tag.trim().toLowerCase());
     const description = body.body.slice(0, 200) + "...";
     const newBlog = new Blog({ ...body, published, tags, description });
 
@@ -37,7 +37,7 @@ router
     const blogId = request.params.blogId;
     const update = request.body;
     const tags = update.tags.includes(",")
-      ? update.tags.split(",")?.map((tag) => tag.toLowerCase())
+      ? update.tags.split(",")?.map((tag) => tag.trim().toLowerCase())
       : update.tags;
     const extras = {
       tags,

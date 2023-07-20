@@ -18,6 +18,7 @@ const Layout = () => {
         <Route element={<Main />} path="/home" />
         <Route element={<Publish />} path="/publish" />
         <Route element={<AllBlogs />} path="/blogs" />
+        <Route element={<AllBlogs />} path="/blogs/categories/:category" />
         <Route element={<Selected />} path="/blogs/:article" />
         <Route element={<Publish />} path="/blogs/:id/edit" />
       </Routes>

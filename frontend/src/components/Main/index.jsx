@@ -19,7 +19,7 @@ const Main = () => {
   }, []);
   return (
     <div>
-      <Hero topBlog={topBlog} />
+      <Hero topBlog={topBlog} blogs={blogs} />
       <Latest blogs={blogs} />
       <Trending blogs={blogs} />
       <Hot blogs={blogs} />
