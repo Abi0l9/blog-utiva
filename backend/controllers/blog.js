@@ -4,6 +4,12 @@ const Blog = require("../models/Blog");
 router
   .get("", async (request, response) => {
     const blogs = await Blog.find({});
+    const { tag } = request.query;
+
+    if (tag) {
+      const result = blogs.filter((blog) => blog.tags.includes(tag));
+      return response.status(200).json({ blogs: result });
+    }
     return response.status(200).json({ blogs });
   })
   .post("", async (request, response) => {

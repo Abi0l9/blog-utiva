@@ -7,6 +7,7 @@ import { handleTime } from "../../utils";
 import { Icon } from "@iconify/react";
 import edit from "@iconify/icons-material-symbols/edit-document";
 import del from "@iconify/icons-material-symbols/delete-forever";
+import Related from "../Related";
 
 const Selected = () => {
   const navigate = useNavigate();
@@ -83,6 +84,9 @@ const Selected = () => {
           <Icon icon={del} color="red" className="mr-2" />
           <p className="font-bold ">Delete Blog</p>
         </div>
+      </div>
+      <div className="mt-5">
+        <Related tag={blog?.tags?.at(0)} />
       </div>
     </div>
   );

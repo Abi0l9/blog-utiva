@@ -9,6 +9,7 @@ const AllBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   const location = useLocation();
   const [title, setTitle] = useState("All Blog Posts");
+  const [tag, setTag] = useState("");
 
   useEffect(() => {
     BlogServices.getBlogs()
@@ -20,13 +21,19 @@ const AllBlogs = () => {
 
   useEffect(() => {
     if (location.state) {
-      const { tag, blogs } = location.state;
+      const tag = location.state;
+      setTag(tag);
+    } //eslint-disable-next-line
+  }, [location.state]);
+
+  useEffect(() => {
+    if (tag) {
+      BlogServices.getBlogsByTag(tag).then((data) => setBlogs(data.blogs));
       const newTitle = `Blogs in ${tag} category: ${blogs?.length}`;
 
       setTitle(newTitle);
-      setBlogs(blogs);
     } //eslint-disable-next-line
-  }, [location.state]);
+  }, [tag, blogs]);
 
   return (
     <div className="p-3 mb-12 md:px-8 min-h-[600px] lg:px-10">

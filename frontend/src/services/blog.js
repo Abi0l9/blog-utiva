@@ -6,6 +6,11 @@ const getBlogs = async () => {
   return request.data;
 };
 
+const getBlogsByTag = async (tag) => {
+  const request = await axios.get(`${baseUrl}?tag=${tag}`);
+  return request.data;
+};
+
 const getABlog = async (blogId) => {
   const request = await axios.get(`${baseUrl}${blogId}`);
   return request.data;
@@ -26,5 +31,12 @@ const deleteBlog = async (blogId) => {
   return request.data;
 };
 
-const services = { getBlogs, getABlog, addBlog, editBlog, deleteBlog };
+const services = {
+  getBlogs,
+  getABlog,
+  addBlog,
+  editBlog,
+  deleteBlog,
+  getBlogsByTag,
+};
 export default services;
