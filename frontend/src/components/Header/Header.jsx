@@ -25,14 +25,7 @@ const MenuItems = ({ styles, handleClick }) => {
             Trending
           </a>
         </li>
-        <li onClick={handleClick} className="p-1 cursor-pointer">
-          <a
-            href="/home#hot"
-            className="active:rounded-[5px] hover:border-b-2 border-blue-500"
-          >
-            Hot
-          </a>
-        </li>
+
         <li onClick={handleClick} className="p-1 cursor-pointer ">
           <a
             href="/blogs"
@@ -48,28 +41,8 @@ const MenuItems = ({ styles, handleClick }) => {
           <Link to="/publish">Publish</Link>
         </li>
       </ol>
-      <form action="">
-        <div className="flex flex-col md:flex-row items-center my-3">
-          <label
-            htmlFor="subscribe"
-            className="block font-semibold md:mr-2 text-blue-800 mt-[50px]"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            id="subscribe"
-            name="subscribe"
-            placeholder="james@yahoo.com"
-            className="border-2 border-blue-700 w-full py-2 text-center font-bold mt-2 rounded-[5px] focus:border-blue-900"
-          />
-        </div>
-        <div className=" w-2/4 mx-auto p-[4px] text-center px-3 bg-blue-900 text-white rounded-[8px] font-bold active:bg-blue-400 active:text-white">
-          <button className="">subscribe</button>
-        </div>
-      </form>
 
-      <div className="w-full mt-10">
+      <div className="w-[200px] mt-10">
         <Links length={2} />
       </div>
     </div>
@@ -101,16 +74,12 @@ const Header = () => {
               Trending
             </a>
           </li>
-          <li className="p-1 cursor-pointer">
-            <a href="/home#hot" className="active:rounded-[5px]">
-              Hot
-            </a>
-          </li>
+
           <li className="border border-blue-500 py-1  px-3 cursor-pointer rounded-[8px] active:bg-blue-500 active:text-white  hover:bg-blue-300 hover:text-white">
             <Link to="/publish">Publish</Link>
           </li>
         </ol>
-        <div className="hidden md:block ml-[30px] text-right">
+        <div className="hidden md:block ml-[80px]  lg:ml-[120px] xlg:ml-[200px] text-right">
           <button className="p-[4px] px-3 bg-blue-500 text-white rounded-[8px] font-bold active:bg-blue-900">
             <a href="/home#subscribe" className="active:rounded-[5px]">
               subscribe

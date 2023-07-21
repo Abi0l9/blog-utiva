@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Hero from "./Hero";
 import Latest from "./Latest";
 import Trending from "./Trending";
-import Hot from "./Hot";
 
 import BlogServices from "../../services/blog";
 
@@ -22,7 +21,6 @@ const Main = () => {
       <Hero topBlog={topBlog} blogs={blogs} />
       <Latest blogs={blogs} />
       <Trending blogs={blogs} />
-      <Hot blogs={blogs} />
     </div>
   );
 };
