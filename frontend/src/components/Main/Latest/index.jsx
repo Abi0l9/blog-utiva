@@ -26,7 +26,7 @@ const Latest = ({ blogs }) => {
               </Link>
             }
             date={handleTime(blog?.published)}
-            category={blog?.tags?.map((tag) => (
+            category={blog?.tags?.slice(0,2)?.map((tag) => (
               <Category key={tag} color="blue">
                 {tag}
               </Category>
