@@ -35,8 +35,7 @@ const Subscribe = () => {
           </p>
         )}
         <p className="text-sm text-gray-200">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-          quaerat repellendus ut, sed ips
+          Your email address will be added to our mailing list and you'll be notified immediately a new blog has been posted
         </p>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col md:flex-row items-center my-3">
