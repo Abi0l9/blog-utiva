@@ -1,2 +1,2 @@
-export const baseUrl = "http://localhost:7129/api/blogs/";
-export const emailUrl = "http://localhost:7129/api/emails/";
+export const baseUrl = "https://utiva-blog-backend.onrender.com/api/blogs/";
+export const emailUrl = "https://utiva-blog-backend.onrender.com/api/emails/";
