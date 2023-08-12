@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npm run dev --prefix backend",
     "client": "npm start --prefix frontend",
+    "client:build": "npm run build --prefix frontend",
     "server:install": "npm install --prefix backend",
     "client:install": "npm install --prefix frontend",
     "deps": "concurrently \"npm run server:install\" \"npm run client:install\" ",
